@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OrderManagementSystem.Repository;
 
 namespace OrderManagementSystem.Web.UI.Controllers
 {
@@ -25,6 +26,15 @@ namespace OrderManagementSystem.Web.UI.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        public ActionResult Customer(int id)
+        {
+            ViewBag.Message = "Your contact page.";
+
+            var context = new OMSContext();
+            var customer = context.Customers.FirstOrDefault(c => c.Id == id);
+
+            return View(customer);
         }
     }
 }

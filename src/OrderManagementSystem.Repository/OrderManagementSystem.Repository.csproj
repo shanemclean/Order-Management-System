@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OMSContext.cs" />
     <Compile Include="Domain\BaseEntity.cs" />
     <Compile Include="Domain\Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
